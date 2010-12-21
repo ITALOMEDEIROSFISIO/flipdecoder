@@ -1,0 +1,13 @@
+CC=i586-mingw32msvc-gcc
+CFLAGS=-O2 -Wall
+
+OBJECTS=main.o base64.o ebk.o md5.o ripemd.o safer.o
+PROGRAM=flipdecoder.exe
+
+all: $(PROGRAM)
+
+$(PROGRAM): $(OBJECTS)
+	$(CC) -o $(PROGRAM) $(OBJECTS)
+
+clean:
+	rm -f $(PROGRAM) $(OBJECTS)
