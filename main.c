@@ -60,7 +60,7 @@ static void processFile(char *md5key, char *filename) {
     assert(strlen(filename) < sizeof(outname) - 4);
     strncpy(outname, filename, sizeof(outname));
     if((sep = strrchr(outname, '.'))) {
-        memmove(sep + 4, sep, strlen(sep));
+        memmove(sep + 4, sep, strlen(sep)+1);
         memcpy(sep, ".out", 4);
     }
     else {
