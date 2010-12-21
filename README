@@ -1,0 +1,87 @@
+flipdecoder
+-------------------------------------------------------------------------------
+
+ This is a program capable of reading files codified by FlipAlbumCD.
+ It was tested with files codified by FlipAlbum(r) Vista CD Build 7.0.0.352.
+
+ Este é um programa capaz de ler arquivos codificados pelo FlipAlbumCD.
+ Testado com arquivos codificados pelo FlipAlbum(r) Vista CD Build 7.0.0.352.
+
+-------------------------------------------------------------------------------
+
+              _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+             | - - - - - - - - - - - - - - - - - - - - - - - - -||
+             |                                                  ||
+             |                      . ' .                       ||
+             |                  . '       ' .                   ||
+             |              . '    .-'"'-.    ' .               ||
+             |          . '      ,"       ".      ' .           ||
+             |      . '        /:           :\        ' .       ||
+             |  . '            ;  .          ;            ' .   ||
+             |    ' .          \: . .       :/          . '     ||
+             |        ' .        `. . .    ,/       . '         ||
+             |            ' .      `-.,,.-'     . '             ||
+             |                ' .           . '                 ||
+             |                    ' .   . '                     ||
+             |                        '                         ||
+             |-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_||
+
+
+              This program was produced in, and abides to the
+              laws of, the Federative Republic of Brazil.
+              I won't be liable if it violates the laws of your
+              country. It's your responsability.
+
+              Este programa foi produzido na, e de acordo com as
+              leis da, República Federativa do Brasil.
+              Não me responsabilizarei se ele violar as leis de
+              seu país. A responsabilidade é sua.
+
+-------------------------------------------------------------------------------
+
+
+1. INTRODUCTION / INTRODUÇÃO
+
+This program allows you to decode the files codified by FlipAlbumCD. This way
+you can, for example, read them in platforms not officially supported by it.
+
+Este programa permite que você decodifique arquivos codificados pelo
+FlipAlbumCD. Desta forma você pode, por exemplo, lê-los em plataformas não
+oficialmente suportadas pelo mesmo.
+
+
+2. HOW TO / COMO USAR
+
+2a.
+
+Open the .opx file corresponding to your album. Look for a line containing
+cdmaker_info3, like the following.
+
+Abra o arquivo .opx correspondente ao seu álbum. Procure por uma linha contendo
+cdmaker_info3, como a seguinte.
+
+<meta name = "cdmaker_info3" content = "bR1Pi+wWGVSPBoqkFFlnXfmLvQ==
+^key^ 1bd598d0f4d6cc21e571d1e48c7702b6"/>
+
+2b.
+
+Copy only the content before ^key^ (it is, the base64 encoded text). Using it,
+flipdecoder can recover the key for your CD.
+
+Copie apenas o conteúdo antes de ^key^ (ou seja, o texto codificado em base64).
+Usando o mesmo, o flipdecoder pode recuperar a chave do seu CD.
+
+2c.
+
+Execute flipdecoder passing the text you copied as the first argument, and the
+files to decode as the next arguments. For each file.ext, flipdecoder will
+generate a decoded file.out.ext file.
+
+Execute o flipdecoder passando o texto que você copiou como primeiro argumento,
+e os arquivos a serem decodificados como os próximos argumentos. Para cada
+arquivo.ext, o flipdecoder irá gerar um arquivo decodificado arquivo.out.ext.
+
+Example / Exemplo:
+
+./flipdecoder bR1Pi+wWGVSPBoqkFFlnXfmLvQ== *.jpg
+
